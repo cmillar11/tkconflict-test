@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+
+<script type="text/javascript">
+// 1 = COMPETING
+// 2 = COLLABORATING
+// 3 = COMPROMISING
+// 4 = AVOIDING
+// 5 = ACCOMMODATING
+
+var type_dict = {'1A':4, '1B': 5, '2A': 3, '2B': 2, '3A': 1, '3B': 4, '4A': 3, '4B': 5, '5A': 2, '5B': 4, '6A': 4, '6B': 1, '7A': 4, '7B': 3, '8A': 1, '8B': 2, '9A': 4, '9B': 1, '10A': 1, '10B': 3, '11A': 2, '11B': 5, '12A': 4, '12B': 3, '13A': 3, '13B': 1, '14A': 2, '14B': 1, '15A': 5, '15B': 4, '16A': 5, '16B': 1, '17A': 1, '17B': 4, '18A': 5, '18B': 3, '19A': 2, '19B': 4, '20A': 2, '20B': 4, '21A': 5, '21B': 2, '22A': 3, '22B': 1, '23A': 2, '23B': 4, '24A': 5, '24B': 3, '25A': 1, '25B': 1, '26A': 3, '26B': 2, '27A': 4, '27B': 5, '28A': 1, '28B': 2, '29A': 3, '29B': 4, '30A': 5, '30B': 2};
+
+var A_array = ['There are times when I let others take responsibility for solving the problem.', ' I try to find a compromise solution.', ' I  am usually firm in pursuing my goals.', 'I try to find a compromise solution.', 'I consistently seek the other\'s help in working out a solution.', 'I try to avoid creating unpleasantness for myself.', 'I try to postpone the issue until I have had some time to think about it.', 'I am usually firm in pursuing my goals.', 'I feel that differences are not always worrying about.', 'I am firm in pursuing my goals.', 'I attempt to get all concerns and issues immediately out in the open.'];
+
+var B_array = [' Rather than negotiate the things on which we disagree, I try to stress those things upon which we both agree.', 'I attempt to deal with all of another\'s and my concerns.', 'I might try to soothe the other\'s feelings and preserve our relationship.', 'I sometimes sacrifice my own wishes for the wishes of the other person.', 'I try to do what is necessary to avoid useless tensions.', 'I try to win my position.', ' I give up some points in exchange for others.', 'I attempt to get all concerns and issues immediately out in the open.', 'I make some effort to get my way.','I try to find a compromise solution.', 'I might try to soothe the other\'s feelings and preserve our relationship.'];
+
+// we get the index from the type_dictionary then i++
+var score_array = [0, 0, 0, 0, 0, 0];
+
+main(document);
+
+function main() {
+	var testLabel = setFormContainers();
+	console.log(testLabel);
+	for (let i = 0; i < A_array.length; ++i) {
+	  var id1 = i.toString() + 'A';
+	  var id2 = i.toString() + 'B';
+	  console.log(id1);
+	  console.log(id2);
+	  setAttributes(id1, id2);
+
+	}	
+}
+
+function setFormContainers() {
+	// create outer div per radio input
+	var div = document.createElement('div');
+	div.class = 'form-check';
+	div.appendChild(document.createTextNode("some text"));
+	// create label
+	var label = document.createElement('label');
+	label.class='form-check-label';
+	// append the label to the div
+	div.appendChild(label);
+	// add to doc
+	document.body.appendChild(div);
+	return label;
+}
+
+
+function setAttributes(id1, id2) {
+	//var g = document.createElement('input');
+	var q1 = document.createElement('input');
+	q1.id = id1;
+}
+
+</script>
+
+<style type="text/css">
+
+</style>
+<body>
+	<h1>
+		Thomas-Kilmann Conflict Test
+	</h1>   
+	<h2>
+		Between the two options, pick the one that you more  immediately feel attuned to.
+	</h2>
+	<div class="form-check">
+		<label class="form-check-label">
+			<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+			Option one is this and that&mdash;be sure to include why it's great
+		</label>
+	</div>
+	<div class="form-check">
+		<label class="form-check-label">
+			<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+			Option two can be something else and selecting it will deselect option one
+		</label>
+	</div>
+
+</body>
+
+</html>

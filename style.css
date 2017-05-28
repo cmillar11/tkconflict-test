@@ -1,0 +1,83 @@
+.form-check-label {
+	margin: 5px;
+	padding: 5px;
+	word-spacing: 4px;
+}
+
+
+
+input {
+	padding-right: 5px;
+	margin: 5px;
+}
+
+h2 {
+	margin: 15px;
+	font-family: "Lato";
+}
+
+h1 {
+	text-align: center;
+	border-bottom: solid;
+}
+
+/*input:hover, .form-check-label:hover {
+	background-color: #EEE8E8;
+}*/
+
+.col-xs-6:hover {
+	background-color: #CACACA;
+}
+
+.lead {
+	margin: 5px 50px 5px 50px;
+}
+
+/* 5 col solution for bootstrap not made by me
+		https://blog.polarbits.co/2014/02/16/quick-tips-5-column-layout-with-twitter-bootstrap/
+*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin:auto;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+.row {
+	border: solid;
+}
+
+.header {
+	text-transform: capitalize;
+	text-align: center;
+}
